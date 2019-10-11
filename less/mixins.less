@@ -1,1 +1,12 @@
 // Mixins Here
+.custom-flex(@direction: row; @wrap: nowrap; @justify: space-around; @align: center) {
+    display: flex;
+    flex-flow: @direction @wrap;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.custom-btn(@text-color, @bg-color) {
+    color: @text-color;
+    background: @bg-color;
+}
