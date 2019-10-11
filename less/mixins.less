@@ -23,9 +23,86 @@
     &:hover {
         background: @text-color;
         color: @bg-color;
+        .makeGrow();
     }
     @media @phone {
         width: 100%;
         padding: 2rem 1rem;
     }
 }
+
+// Animation mixins
+.makeGrow(@time: 0.2s; @scale: 1.1) {
+    transition: all @time ease-in-out; 
+    &:hover { 
+        transform: scale(@scale); 
+        }
+    }
+
+//Keyframes animation
+
+@keyframes fadeOutUp {
+    0% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+    25% {
+        opacity: 0.9;
+        transform: translateY(-10px);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(-20px);
+    }
+    50% {
+        opacity: 0.6;
+        transform: translateY(-30px);
+    }
+    100% {
+       opacity: 0;
+       transform: translateY(-90px);
+    }
+ } 
+
+ @keyframes fadeOutLeft {
+    0% {
+       opacity: 1;
+       transform: translate(0);
+    }
+    25% {
+        opacity: 0.9;
+        transform: translate(-10px, -10px);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translate(-20px, -20px);
+    }
+    50% {
+        opacity: 0.6;
+        transform: translate(-30px, -30px);
+    }
+    100% {
+       opacity: 0;
+       transform: translate(-90px, -90px);
+    }
+ } 
+
+ //Animation mixin using keyframes
+
+ .fadeUp(@time: 1s) {
+    animation-name: fadeOutUp;
+    -webkit-animation-duration: @time;
+    animation-duration: @time;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in;  
+ }
+
+ .fadeLeft(@time: 1s) {
+    animation-name: fadeOutLeft;
+    -webkit-animation-duration: @time;
+    animation-duration: @time;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in;
+ }
