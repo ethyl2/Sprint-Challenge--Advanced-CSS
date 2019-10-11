@@ -5,13 +5,15 @@ nav {
     .custom-flex(@direction: column);
     width: 100%;
     h1 {
-        font-size: 4rem;
-        margin-bottom: 1.2rem;
+        .company-name();
     }
     div {
         .custom-flex();
         width: 60%;
         padding-bottom: 1.2rem;
+        @media @phone {
+            width: 90%;
+        }
         a {
             color: @nav-font;
             text-decoration: none;
