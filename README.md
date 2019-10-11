@@ -32,15 +32,22 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
-1. What is the difference between an adaptive website and a fully responsive website?
+1. What is the difference between an adaptive website and a fully responsive website? A fully responsive website responses and changes its layout at any width of the browser, not just at certain specified widths/breakpoints. An adaptive website only adapts at specified widths. Both use media queries, but responsive layouts also utilize responsive units.
 
 2. Describe what it means to be mobile first vs desktop first.
+They are different approaches to creating the layout of a site. With a mobile-first approach, you would build a site with a mobile-sized screen in mind and then add media queries with (min-width) values in ascending order to adjust the layout to be more optimal for larger screens. With a desktop-first approach, you start with a layout that is optimized for the size of a desktop display and then add media queries with (max-width) values in descending order to adjust the layout for smaller-sized devices.
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
+It establishes the root font size to be 10px, in order to easier calculate rem units. 1 rem = 10px when font-size: 62.5% is set for the html element. 1.6rem = 16px, etc.
 
 4. How would you describe preprocessing to someone new to CSS?
+Preprocessing is taking code that can’t be used as is and compiling it, that is, converting it, into code that can be used. In this case, less code has stuff that the browser can't process and so it is compiled to css code, which can be understood and used by the browser.
 
-5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+5. What is your favorite concept in preprocessing? 
+Nesting. It makes it much easier to organize everything. I also like being able to nest the media queries specific to elements with those element styles, too.
+
+What is the concept that gives you the most trouble?
+Sometimes I forget to add the . before a mixin, which is a small but important thing. But I usually figure it out pretty soon. Also, today I had a few times where my changes weren't showing up on my browser, which was a little stumbling block, but it always came down to something little that made the compiler not work. So once I fixed those, I was good to go on. Most of the concepts we’ve used aren’t too difficult to grasp now, but I was reading the in-depth guide in the lesscss.org site yesterday, and there’s a lot more complexity that started to feel overwhelming! 
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
