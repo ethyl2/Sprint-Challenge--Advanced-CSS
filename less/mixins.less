@@ -6,7 +6,17 @@
     align-items: @align;
 }
 
-.custom-btn(@text-color, @bg-color) {
-    color: @text-color;
+.custom-btn(@text-color: @waterloo; @bg-color: @btn-bg-color) {
     background: @bg-color;
+    width: 30%;
+    padding: 1rem;
+    color: @text-color;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 3px;
+    font-weight: bold;
+    &:hover {
+        background: @text-color;
+        color: @bg-color;
+    }
 }
