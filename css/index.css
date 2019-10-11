@@ -190,6 +190,7 @@ footer {
 .home .walk {
   margin-top: 60px;
   border-top: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
   padding: 50px 60px;
   display: flex;
   justify-content: center;
@@ -251,4 +252,47 @@ footer {
   width: 100%;
   height: auto;
   border-radius: 10px;
+}
+.home .subscribe {
+  width: 50%;
+  margin: 3rem auto;
+}
+@media (max-width: 500px) {
+  .home .subscribe {
+    width: 85%;
+  }
+}
+.home .subscribe form input,
+.home .subscribe form select {
+  width: 100%;
+  padding: 1rem 0;
+  line-height: 2rem;
+  margin: 1rem 0;
+}
+.home .subscribe form label {
+  font-size: 2rem;
+}
+.home .subscribe form button {
+  background: #024C90;
+  width: 30%;
+  padding: 1rem;
+  color: #F6F7F8;
+  font-size: 2rem;
+  text-align: center;
+  border-radius: 3px;
+  font-weight: bold;
+}
+.home .subscribe form button:hover {
+  background: #F6F7F8;
+  color: #024C90;
+  transition: all 0.2s ease-in-out;
+}
+.home .subscribe form button:hover:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 500px) {
+  .home .subscribe form button {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
 }

@@ -71,6 +71,7 @@
   .walk {
     margin-top: 60px;
     border-top: 1px solid @main-border-color;
+    border-bottom: 1px solid @main-border-color;
     padding: 50px 60px;
     display: flex;
     justify-content: center;
@@ -110,6 +111,30 @@
         height: auto;
         border-radius: 10px;
       }
+    } 
+  }
+
+  .subscribe {
+    //padding: 2rem 4rem;
+    width: 50%;
+    margin: 3rem auto;
+    @media @phone {
+      width: 85%;
+    }
+    form {
+      input, select {
+        width: 100%;
+        padding: 1rem 0;
+        line-height: 2rem;
+        margin: 1rem 0;
+      }
+      label {
+        font-size: 2rem;
+      }
+      button {
+        .custom-btn(@porcelain, @dark-sky);
+      }
     }
   }
+
 }// home
