@@ -1,1 +1,24 @@
 // Navigation code here
+
+nav {
+    background: @nav-bg;
+    .custom-flex(@direction: column);
+    width: 100%;
+    h1 {
+        .company-name();
+    }
+    div {
+        .custom-flex();
+        width: 60%;
+        padding-bottom: 1.2rem;
+        @media @phone {
+            width: 90%;
+        }
+        a {
+            color: @nav-font;
+            text-decoration: none;
+            font-size: 2rem;
+            .makeGrow(0.4s);
+        }
+    }
+}
